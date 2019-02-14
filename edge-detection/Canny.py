@@ -14,10 +14,26 @@ class Canny():
     
     def __init__(self):
         
-        pass
+        self.img_gray = None
+        self.smoothed = None
+        self.dx = None
+        self.dy = None
+        self.gradMat = None
+        self.NMS_Mat = None
+        self.img_final = None
+
+    def edge_detection(self, img_path):
+
+        self.img_gray = self.greyed(img_path)
+        self.smoothed = self.smooth(self.img_gray)
+        self.dx, self.dy, self.gradMat, _ = self.gradients(self.smoothed)
+        self.NMS_Mat = self.NMS(self.gradMat,self.dx, self.dy)
+        self.img_final = self.double_threshold(self.NMS_Mat) 
+        
+        return self.img_final
     
     # 灰度化
-    def gray(self, img_path):
+    def greyed(self, img_path):
         """
         Calculate function:
         Gray(i,j) = [R(i,j) + G(i,j) + B(i,j)] / 3
@@ -138,7 +154,7 @@ class Canny():
                         #      g3
                         # g2 c g4
                         # g1
-                        else:
+                        if gradX * gradY > 0:
                             grad1 = d[i+1, j-1]
                             grad3 = d[i-1, j+1]
 
@@ -148,7 +164,7 @@ class Canny():
                         # g1
                         # g2 c g4
                         #      g3
-                        if gradX * gradY > 0:
+                        else:
                             grad1 = d[i-1, j-1]
                             grad3 = d[i+1, j+1]
                             
@@ -190,19 +206,9 @@ class Canny():
                     
         
         return DT 
-        
 
-def edge_detection(img_path):
+
+if __name__ == "__main":
 
     canny = Canny()
-    img_gray = canny.gray(img_path)
-    new_gray = canny.smooth(img_gray)
-    dx, dy, M, _ = canny.gradients(new_gray)
-    NMS = canny.NMS(dx, dy, M)
-    DT = canny.double_threshold(NMS) 
-    plt.imshow(DT, cmap="gray")
-
-
-if __name__ == "__main__":
-
-    edge_detection("D:/cv作业/image-alignment/football.jpg")
+    edges = canny.edge_detection("D:/GitHub/CV_Learning/edge-detection/football.jpg")
