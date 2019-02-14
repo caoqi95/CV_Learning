@@ -94,7 +94,7 @@ class Canny():
         for i in range(1, W-1):
             for j in range(1, H-1):
                 
-                # 如果当前梯度为0，该点就不是比边缘点
+                # 如果当前梯度为0，该点就不是边缘点
                 if M[i, j] == 0:
                     NMS[i, j] = 0
                     
@@ -109,7 +109,7 @@ class Canny():
                         grad2 = d[i-1, j]
                         grad4 = d[i+1, j]
                         
-                        # 如果 x, y 方向导数符号一致
+                        # 如果 x, y 方向导数符号相同
                         # 像素点位置关系
                         # g1 g2
                         #    c
@@ -133,16 +133,7 @@ class Canny():
                         grad2 = d[i, j-1]
                         grad4 = d[i, j+1]
                         
-                        # 如果 x, y 方向导数符号一致
-                        # 像素点位置关系
-                        # g1
-                        # g2 c g4
-                        #      g3
-                        if gradX * gradY > 0:
-                            grad1 = d[i-1, j-1]
-                            grad3 = d[i+1, j+1]
-                        
-                        # 如果 x，y 方向导数符号相反
+                        # 如果 x, y 方向导数符号相同
                         # 像素点位置关系
                         #      g3
                         # g2 c g4
@@ -150,6 +141,16 @@ class Canny():
                         else:
                             grad1 = d[i+1, j-1]
                             grad3 = d[i-1, j+1]
+
+                        
+                        # 如果 x，y 方向导数符号相反
+                        # 像素点位置关系
+                        # g1
+                        # g2 c g4
+                        #      g3
+                        if gradX * gradY > 0:
+                            grad1 = d[i-1, j-1]
+                            grad3 = d[i+1, j+1]
                             
                     # 利用 grad1-grad4 对梯度进行插值
                     gradTemp1 = weight * grad1 + (1 - weight) * grad2
@@ -205,6 +206,3 @@ def edge_detection(img_path):
 if __name__ == "__main__":
 
     edge_detection("D:/cv作业/image-alignment/football.jpg")
-
-
-
