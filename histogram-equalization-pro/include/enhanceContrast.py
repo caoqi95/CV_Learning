@@ -16,6 +16,9 @@ class enhanceContrast(object):
     def __init__(self):
         pass
     
+    """
+    Baisc Histogram Equalization
+    """
     def basic_HE(self, img):
         
         hist, bins = np.histogram(img.ravel(), 256, [0, 256])
@@ -31,6 +34,10 @@ class enhanceContrast(object):
         img_eq = cdf[img]
 
         return img_eq
+
+    """
+    Bi-Histogram Equalization(BHE)
+    """
         
     def BHE(self, img):
     
@@ -64,6 +71,10 @@ class enhanceContrast(object):
     
         return img_eq
     
+    """
+    Clipped Histogram Equalization
+    """
+    
     def clipped_HE(self, img, limit):
 
         hist, bins = np.histogram(img.ravel(), 256, [0, 256])
@@ -82,7 +93,9 @@ class enhanceContrast(object):
     
         return img_eq
     
-    
+    """
+    Bi-Histogram Equalization with a Plateau Limit(BHEPL)
+    """
     def BHEPL(self, img):
     
         # image mean
@@ -130,6 +143,10 @@ class enhanceContrast(object):
         img_eq = new_cdf[img]
     
         return img_eq
+
+    """
+    Adaptive Histogram Equalization
+    """
     
     def adaptive_HE(self, img):
     
