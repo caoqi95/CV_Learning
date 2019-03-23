@@ -1,5 +1,5 @@
 """
-some algorithms which improve histogram equalization.
+some algorithms which based on the histogram equalization.
 
 @author: caoqi95
 @time: 2019-03-20
