@@ -18,23 +18,7 @@ class enhanceContrast(object):
     """
     Baisc Histogram Equalization
     """
-    """
-    def basic_HE(self, img):
-        
-        hist, bins = np.histogram(img.ravel(), 256, [0, 256])
-        pdf = hist / np.prod(img.shape)
-        cdf = pdf.cumsum()
-    
-        # get the new cdf
-        cdf = cdf *(cdf[-1] - cdf[0]) + cdf[0]
 
-        # get new img 
-        img_shape = img.shape
-        img_eq = np.zeros((img_shape), dtype=np.uint8)
-        img_eq = cdf[img]
-
-        return img_eq
-    """
     def basic_HE(self, img):
         
         img_eq = cv2.equalizeHist(img)
