@@ -1,5 +1,5 @@
 # CV_Learning
-Learning computer vision.
+Learning computer vision and image processing.
 
 + image-alignmnet: This assignment from Coursera "Deep Learning in Computer Vision" course.
 + face-alignment: Clearly practice for face alignment.
