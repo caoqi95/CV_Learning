@@ -6,3 +6,4 @@ Learning computer vision and image processing.
 + edge-detection: Canny edge detection algorithm implement by Python3.
 + histogram-equalization: learning histogram equalization.
 + histogram-equalization-pro: some algorithms which based on the histogram equalization.
++ retinex: implement and compare different retinex algorithms.
