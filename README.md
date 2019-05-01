@@ -6,5 +6,5 @@ Learning computer vision and image processing.
 + edge-detection: Canny edge detection algorithm implement by Python3.
 + histogram-equalization: learning histogram equalization.
 + course-projects：including some projects in the "Digit Image Processing" course.
-  - histogram-equalization-pro: some algorithms which based on the histogram equalization.
-  - retinex: implement and compare different retinex algorithms, like SSR, MSR, MSRCR etc.
+  - 01 - histogram-equalization-pro: some algorithms which based on the histogram equalization.
+  - 02 - retinex: implement and compare different retinex algorithms, like SSR, MSR, MSRCR etc.
