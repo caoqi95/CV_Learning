@@ -79,7 +79,7 @@ MSRCR 算法是一种改进 MSR 的算法，全称是 Multi-Scale Retinex with C
 
 * _SSR : Single Scale Retinex_
 
-* _SSR - DIV : Single Scale Retin e t ( Z = X/Y )_
+* _SSR - DIV : Single Scale Retinet ( Z = X/Y )_
 
 * _SSR - LOG : Single Scale Retinex (logZ = logX – logY)_
 
