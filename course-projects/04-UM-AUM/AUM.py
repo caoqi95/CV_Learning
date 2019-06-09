@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 30 21:44:30 2019
+Modified on Thu May 30 21:44:30 2019
 
 @author: caoqi95
+
+Original version from this Repo:
+https://github.com/YueHazelZheng/scikit-image/blob/master/skimage/filters/_unsharp_mask.pyx
 """
 import math
 import numpy as np
