@@ -22,7 +22,7 @@ Retinex 这个词由 Retina 和 Cortex 两个单词组成。在 Retinex 理论�
 在图像处理领域，常将该理论用于图像增强，为了得到成像更好的图片。这时，R(x,y) 表示为图像增强得到后的图像，I(x,y) 为原始的图像。在处理过程中 L(x,y) 常为 I(x,y) 高通滤波之后的结果，也可以用其他滤波的方法，比如中值滤波，均值滤波等等。
 
 ### SSR 算法
-SSR (Singal Scale Retinex)，即单尺度视网膜算法是 Retinex 算法中最基础的一个算法。运用的就是上面的方法，具体步骤如下：
+SSR (Single Scale Retinex)，即单尺度视网膜算法是 Retinex 算法中最基础的一个算法。运用的就是上面的方法，具体步骤如下：
 
 * 输入原始图像 I(x,y) 和滤波的半径范围 sigma;
 * 计算原始图像 I(x,y) 高斯滤波后的结果，得到 L(x,y);
@@ -79,7 +79,7 @@ MSRCR 算法是一种改进 MSR 的算法，全称是 Multi-Scale Retinex with C
 
 * _SSR : Single Scale Retinex_
 
-* _SSR - DIV : Single Scale Retinet ( Z = X/Y )_
+* _SSR - DIV : Single Scale Retinex ( Z = X/Y )_
 
 * _SSR - LOG : Single Scale Retinex (logZ = logX – logY)_
 
