@@ -9,7 +9,7 @@ including some projects in the "Digit Image Processing" course.
  - 04 - UM-AUM: implement and compare Unsharp Masking and Adaptive Unsharp Masking algorithms.
   
 ### Others
-including some projects from other courses.
+including some projects from other courses or internet.
 + image-alignmnet: This assignment from Coursera "Deep Learning in Computer Vision" course.
 + face-alignment: Clearly practice for face alignment.
 + edge-detection: Canny edge detection algorithm implement by Python3.
