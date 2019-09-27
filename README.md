@@ -10,10 +10,11 @@ including some projects in the "Digital Image Processing" course.
 
 ### 「3D Vision」 Course projects
 
-None 
++ 01 - De-noising: Using ROF(Rudin-Osher-Fatemi) algorithm and Chambolle's method to slove the de-noising task.
 
 ### Others
 including some projects from other courses or internet.
+
 + image-alignmnet: This assignment from Coursera "Deep Learning in Computer Vision" course.
 + face-alignment: Clearly practice for face alignment.
 + edge-detection: Canny edge detection algorithm implement by Python3.
