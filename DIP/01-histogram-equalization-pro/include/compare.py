@@ -28,3 +28,4 @@ def compare(img_path):
     plot_res(img, img_he, "Orignal", "Basic_HE")
     plot_res(img_bhe, img_che, "Bi-Histogram Equalization", "Clipped Histogram Equalization")
     plot_res(img_bhepl, img_ahe, "Bi-Histogram Equalization with a Plateau Limit", "Adaptive Histogram Equalization")
+    
