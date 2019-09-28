@@ -10,7 +10,7 @@ including some projects in the "Digital Image Processing" course.
 
 ### 「3D Vision」 Course projects
 
-+ 01 - De-noising: Using ROF(Rudin-Osher-Fatemi) algorithm and Chambolle's method to slove the de-noising task.
++ 01 - De-noising: Using ROF(Rudin-Osher-Fatemi) algorithm and Chambolle's method to solve the de-noising task.
 
 ### Others
 including some projects from other courses or internet.
