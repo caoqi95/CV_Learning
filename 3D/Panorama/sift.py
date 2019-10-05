@@ -15,7 +15,7 @@ def process_image(imagename, resultname, params="--edge-thresh 10 --peak-thresh 
     Process an image and save the results in a file.
     """
     path = os.path.abspath(os.path.join(os.path.dirname("__file__"),os.path.pardir))
-    path = path+"\\synthesis\\utils\\win32vlfeat\\sift.exe "
+    path = path+"\\Panorama\\utils\\win32vlfeat\\sift.exe "
     #print(path)
     if imagename[-3:] != 'pgm':
         # create a pgm file
