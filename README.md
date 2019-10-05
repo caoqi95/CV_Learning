@@ -9,6 +9,7 @@ including some projects in the "Digital Image Processing" course.
  - 04 - UM-AUM: implement and compare Unsharp Masking and Adaptive Unsharp Masking algorithms.
 
 ### 「3D Vision」 Course projects
+including some projects in the "3D Vision" course.
 
 + 01 - De-noising: Using ROF(Rudin-Osher-Fatemi) algorithm and Chambolle's method to solve the de-noising task.
 + 02 - Panorama: Using SIFT, homography, Ransac algorithms to synthesis three images and get a panorama image.
