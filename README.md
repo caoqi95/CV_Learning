@@ -11,6 +11,7 @@ including some projects in the "Digital Image Processing" course.
 ### 「3D Vision」 Course projects
 
 + 01 - De-noising: Using ROF(Rudin-Osher-Fatemi) algorithm and Chambolle's method to solve the de-noising task.
++ 02 - Panorame: Using SIFT, homography, Ransac algorithms to synthesis three images and get a panorama image.
 
 ### Others
 including some projects from other courses or internet.
