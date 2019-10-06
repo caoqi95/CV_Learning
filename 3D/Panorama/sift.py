@@ -34,6 +34,9 @@ def read_features_from_file(filename):
     Read feature properties and return in matrix form.
     """
     f = np.loadtxt(filename)
+    
+    # in the .txt file, the first four values are coordinates, scale and rotation angle
+    # then followed by 128 values of the corresponding descriptor.
     return f[:, :4], f[:, 4:] # feature locations, descriptors
 
 def write_features_to_file(filename, locs, desc):
