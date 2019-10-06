@@ -37,14 +37,14 @@ for i in range(2):
     sift.plot_matches(im2,im1,l[i+1],l[i],matches[i],show_below=True)
     
     
-# function to convert the matches to hom. points
+# function to convert the matches to homography points
 def convert_points(j):
     ndx = matches[j].nonzero()[0]
     fp = homography.make_homog(l[j+1][ndx,:2].T) 
     ndx2 = [int(matches[j][i]) for i in ndx]
     tp = homography.make_homog(l[j][ndx2,:2].T) 
     
-    # switch x and y - TODO this should move elsewhere
+    # switch x and y
     fp = np.vstack([fp[1],fp[0],fp[2]])
     tp = np.vstack([tp[1],tp[0],tp[2]])
     return fp,tp
