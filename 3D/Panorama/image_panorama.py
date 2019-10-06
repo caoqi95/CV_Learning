@@ -60,16 +60,15 @@ H_12 = homography.H_from_ransac(fp, tp, model)[0] # im 1 to 2
 
 # warp the images
 delta = 800
-delta1 = 500
 
 im0 = np.array(Image.open(imname[0]), "uint8")
 im1 = np.array(Image.open(imname[1]), "uint8")
 im2 = np.array(Image.open(imname[2]), "uint8")
 
-im_01 = warp.panorama(H_01, im0, im1, delta, delta1)
-im_12 = warp.panorama(H_12, im1, im2, delta, delta1)
+im_01 = warp.panorama(H_01, im0, im1, delta, delta)
+im_12 = warp.panorama(H_12, im1, im2, delta, delta)
 im0 = np.array(Image.open(imname[0]), "f")
-im_02 = warp.panorama(np.dot(H_12, H_01), im0, im_12, delta, delta1)
+im_02 = warp.panorama(np.dot(H_12, H_01), im0, im_12, delta, delta)
 
 plt.figure(figsize=(15, 15))
 im0 = np.array(Image.open(imname[0]), "uint8")
