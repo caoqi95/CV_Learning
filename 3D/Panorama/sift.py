@@ -30,17 +30,27 @@ def process_image(imagename, resultname, params="--edge-thresh 10 --peak-thresh 
     print('processed', imagename, 'to', resultname)
     
 def read_features_from_file(filename):
-    
+    """
+    Read feature properties and return in matrix form.
+    """
     f = np.loadtxt(filename)
-    return f[:, :4], f[:, 4:]
+    return f[:, :4], f[:, 4:] # feature locations, descriptors
 
 def write_features_to_file(filename, locs, desc):
-    
+    """
+    Save feature location and descriptor to flie.
+    """
     np.savetxt(filename, np.hsatck((locs, desc)))
     
     
 def match(desc1, desc2):
+    """
+    For each descriptor in the first image,
+    select its match in the second image.
     
+    input: desc1 (descriptors for the first image),
+           desc2 (same for second image)
+    """
     desc1 = np.array([d/np.linalg.norm(d) for d in desc1])
     desc2 = np.array([d/np.linalg.norm(d) for d in desc2])
     
@@ -62,7 +72,9 @@ def match(desc1, desc2):
     return matchscores
 
 def appendimages(im1,im2):
-    """ Return a new image that appends the two images side-by-side. """
+    """ 
+    Return a new image that appends the two images side-by-side. 
+    """
     
     # select the image with the fewest rows and fill in enough empty rows
     rows1 = im1.shape[0]    
@@ -77,9 +89,12 @@ def appendimages(im1,im2):
     return np.concatenate((im1,im2), axis=1)
 
 def plot_matches(im1,im2,locs1,locs2,matchscores,show_below=True):
-    """ Show a figure with lines joining the accepted matches
-        input: im1,im2 (images as arrays), locs1,locs2 (location of features), 
-        matchscores (as output from 'match'), show_below (if images should be shown below). """
+    """ 
+    Show a figure with lines joining the accepted matches
+        
+    input: im1,im2 (images as arrays), locs1,locs2 (location of features), 
+        matchscores (as output from 'match'), show_below (if images should be shown below). 
+    """
     
     im3 = appendimages(im1,im2)
     if show_below:
