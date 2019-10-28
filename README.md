@@ -13,6 +13,7 @@ including some projects in the "3D Vision" course.
 
 + 01 - De-noising: Using ROF(Rudin-Osher-Fatemi) algorithm and Chambolle's method to solve the de-noising task.
 + 02 - Panorama: Using SIFT, homography, Ransac algorithms to synthesis three images and get a panorama image.
++ 03 - AR-system: A simple implement of AR system.
 
 ### Others
 including some projects from other courses or internet.
