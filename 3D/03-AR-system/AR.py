@@ -320,7 +320,7 @@ def setup():
     
 
 # get frames' paths
-paths = glob.glob('./03-AR-system/book2/*')
+paths = glob.glob('./03-AR-system/books/*')
 
 
 i = 10 # used for get the ith frame
