@@ -15,7 +15,7 @@ including some projects in the "3D Vision" course.
 + 02 - Panorama: Using SIFT, homography, Ransac algorithms to synthesis three images and get a panorama image.
 + 03 - AR-system: A simple implement of AR system.
 
-### Others
+### Other projects
 including some projects from other courses or internet.
 
 + image-alignmnet: This assignment from Coursera "Deep Learning in Computer Vision" course.
