@@ -19,8 +19,8 @@ K = np.array([[1670, 0, 1155], [0, 1604, 866], [0, 0, 1]])
 # load images and compute features
 #im1_path = 'C:/Users/User/Desktop/course/3D/project/pcv_data/alcatraz1.jpg'
 #im2_path = 'C:/Users/User/Desktop/course/3D/project/pcv_data/alcatraz2.jpg'
-im1_path = './f1.jpg'
-im2_path = './f2.jpg'
+im1_path = './e1.jpg'
+im2_path = './e2.jpg'
 
 im1 = np.array(Image.open(im1_path))
 sift.process_image(im1_path, 'im1.sift')
