@@ -12,10 +12,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 ## Loading the data
-img1 = cv2.imread('D:/GitHub/five-point-fundamental/MatlabCode/data/barrsmithA.png') # left imgae
-img2 = cv2.imread('D:/GitHub/five-point-fundamental/MatlabCode/data/barrsmithB.png') # right image
+img1 = cv2.imread('./data/barrsmithA.png') # left imgae
+img2 = cv2.imread('./data/barrsmithB.png') # right image
 
-data = np.loadtxt('D:/GitHub/five-point-fundamental/MatlabCode/data/barrsmith_kps.txt')
+data = np.loadtxt('./data/barrsmith_kps.txt')
 #print(data.shape)
 
 n = data.shape[0]
@@ -36,6 +36,8 @@ if pts_num == 7:
     method = cv2.FM_7POINT
 if pst_num == 8:
     method = cv2.FM_8POINT
+    
+    
 for i in range(iterations):
     indices = np.random.permutation(n)[:pts_num].reshape((1, pts_num))
     #print(indices)
