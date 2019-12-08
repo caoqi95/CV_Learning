@@ -15,7 +15,7 @@ including some projects in the "3D Vision" course.
 + 02 - Panorama: Using *SIFT*, *homography*, *Ransac* algorithms to synthesis three images and get a panorama image.
 + 03 - AR-system: A simple implement of AR system.
 + 04 - 3D-Structure-recover: 3D structure recover based on two image views.
-+ 05 - Final-personal-project: Select a paper about *Five-point* algorithm and implement it, compare it with *Seven-point*, *Eight-point* algorithm.
++ 05 - Final-personal-project: Select a paper about *Five-point* algorithm and compare it with *Seven-point* and *Eight-point* algorithms.
 
 ### Other projects
 including some projects from other courses or internet.
