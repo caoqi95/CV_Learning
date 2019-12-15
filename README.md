@@ -20,7 +20,7 @@ including some projects in the *3D Vision* course.
 ### Other projects
 including some projects from other courses or internet.
 
-+ image-alignmnet: This assignment from Coursera "Deep Learning in Computer Vision" course.
++ image-alignmnet: This assignment from Coursera *Deep Learning in Computer Vision*course.
 + face-alignment: Clearly practice for face alignment.
 + edge-detection: Canny edge detection algorithm implement by Python3.
 + histogram-equalization: learning histogram equalization.
